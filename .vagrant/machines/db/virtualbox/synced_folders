@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/ubuntu/environment":{"guestpath":"/home/ubuntu/environment","hostpath":"/Users/AshIsbitt/Code/opscode/109-vagrant-for-ci-2/environment/db","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/AshIsbitt/Code/opscode/109-vagrant-for-ci-2","disabled":false,"__vagrantfile":true}}}
