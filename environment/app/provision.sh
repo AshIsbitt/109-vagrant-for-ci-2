@@ -24,5 +24,15 @@ sudo apt-get install nginx -y
 sudo rm /etc/nginx/sites-available/default
 sudo cp /home/ubuntu/environment/nginx.default /etc/nginx/sites-available/default
 
-# finally, restart the nginx service so the new config takes hold
-sudo service nginx restart
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum install jenkins
+
+sudo usermod -a -G docker jenkins
+
+service docker start
+service jenkins start
+service nginx start
+chkconfig docker on
+chkconfig jenkins on
+chkconfig nginx on
